@@ -8,7 +8,9 @@ def solution(x_success: int,
              x_cnt: int, 
              y_success: int, 
              y_cnt: int) -> bool:
-    # Измените код этой функции
-    # Это будет вашим решением
-    # Не меняйте название функции и её аргументы
-    return ... # Ваш ответ, True или False
+    p = 0.02
+    a = statsmodels.stats.proportion.proportions_ztest(count = x_success, nobs = x_cnt, value = y_success/y_cnt, alternative='smaller')
+    if a <= p:
+      return True
+    else:
+      return False
