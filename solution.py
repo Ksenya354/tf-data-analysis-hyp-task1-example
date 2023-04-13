@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import statsmodels.stats.proportion
 
 
 chat_id = 1943224240 # Ваш chat ID, не меняйте название переменной
